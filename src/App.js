@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Page from './components/Page/Page'
+import Sidebar from './components/sidebar/Sidebar'
 
-function App() {
+const key = process.env.REACT_APP_API_KEY
+const title = process.env.REACT_APP_TITLE
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Page title={title}>
+      <Sidebar />
+    </Page>
+  )
 }
 
-export default App;
+export default App
