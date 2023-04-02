@@ -1,10 +1,10 @@
 import React from 'react'
 import StyledMain from './Main.styles'
 
-const Main = () => {
+const Main = ({children}) => {
   return (
     <StyledMain>
-        Main
+        {children}
     </StyledMain>
   )
 }
